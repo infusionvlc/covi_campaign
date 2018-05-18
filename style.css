@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Zilla+Slab');
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Zilla Slab', serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* PALETA */
+
+:root {
+  --sky: #354093;
+  --heaven: #F7F2BF;
+  --eter: #FAFAFA;
+  --shadow: #F2F2F2;
+  --fire: #E8654D;
+  --sea: #68C1BD;
+  --sun: #ECBB3B;
+  --blackish: #9f9f9f;
+}
+
+/* FIN PALETA */
+
+nav {
+  background: var(--eter);
+}
+
+nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  padding: 2em;
+  text-align: right;
+}
+
+nav li {
+  display: inline-block;
+  line-height: 2em;
+  padding: 14px 16px;
+  text-align: right;
+}
+
+nav li a {
+  color: var(--sky);
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  color: var(--sea);
+}
+
+h1 {
+  color: var(--sky);
+  font-size: 4em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: var(--sky);
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  color: var(--sky);
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.action-button {
+  background: var(--fire);
+  border-radius: 50px;
+  color: var(--eter);
+  cursor: pointer; /* mouse se convierte a mano */
+  display: inline-block;
+  font-size: 1.5em;
+  margin-top: 4em;
+  padding: 1em;
+  text-align: center;
+  transition: all 0.5s ease; /* activamos animaciones */
+  width: 60%;
+}
+
+.action-button:hover {
+  background: var(--sky); /* animamos el color */
+}
+
+.breathe {
+  display: block;
+  height: 10em;
+}
+
+.card {
+  box-shadow: 0px 0px 10px 0px var(--shadow); /* sombreado de las tarjetas */
+  margin: 1em;
+  padding: 2.5em;
+}
+
+.cat-avatar {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.center {
+  text-align: center;
+}
+
+.fire {
+  background: var(--fire);
+  color: var(--eter);
+}
+
+.fire h3 {
+  color: var(--eter);
+}
+
+.flex { /* aplica flex a un div */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex > * { /* alineamos todos los hijos del flex con el mismo ancho */
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.flex-center {
+  align-items: center; /* alinea hijos de flex al centro vertical */
+}
+
+.full-width {
+  width: 100%;
+}
+
+.huge-logo {
+  margin-bottom: 3em;
+}
+
+.left-margin { /* HOJAS */
+  position: fixed; /* paralax */
+  left: -75px;
+  top: 0%;
+  width: 200px;
+  z-index: 999; /* para que estén por encima de todo */
+}
+
+.logo {
+  flex: 0 0 auto;
+  height: 4vh;
+  margin-top: 2em;
+  width: auto;
+}
+
+.logos {
+  justify-content: space-around;
+}
+
+.menu-burger {
+  height: 1.5em;
+}
+
+.menu {
+  display: inline-block;
+}
+
+
+/* ANIMACIONES POSTERS */
+
+.poster-r {
+  transform: rotate(7deg); /* mostramos poster girado */
+  transition: all 1s ease; /* activamos animaciones */
+}
+
+.poster-l {
+  transform: rotate(-7deg); /* mostramos poster girado */
+  transition: all 1s ease; /* activamos animaciones */
+}
+
+.poster-r:hover, .poster-l:hover {
+  transform: rotate(0deg); /* animamos: lo ponemos recto */
+  transform: scale(1.5, 1.5); /* animamos: lo hacemos más grande */
+}
+
+/* FIN ANIMACIONES POSTERS */
+
+.right {
+  padding-left: 6em;
+}
+
+.right-margin { /* HOJAS */
+  position: fixed; /* paralax */
+  right: -75px;
+  top: 0%;
+  width: 200px;
+  z-index: 999; /* para que estén por encima de todo */
+}
+
+.sea {
+  background: var(--sea);
+  color: var(--eter);
+}
+
+.sea h3 {
+  color: var(--eter);
+}
+
+.sun {
+  background: var(--sun);
+  color: var(--eter);
+}
+
+.sun h3 {
+  color: var(--eter);
+}
+
+.top-button {
+  background: var(--eter);
+  border-radius: 999px;
+  box-shadow: 0px 0px 10px 0px var(--blackish);
+  bottom: 2em;
+  cursor: pointer;
+  padding: 1em;
+  position: fixed;
+  right: 2em;
+  transition: all 0.5s ease; /* activamos animaciones */
+  width: 4em;
+  z-index: 9999;
+}
+
+.top-button:hover {
+  background: var(--shadow);
+}
+
+.top-space {
+  padding-bottom: 3em;
+  padding-top: 3em;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 1.6em;
+}
+
+section {
+  padding-bottom: 8em;
+  padding-top: 8em;
+}
+
+footer {
+  background: var(--shadow);
+  padding: 2em;
+  text-align: center;
+}
+
+#about, #campaign {
+  background: var(--eter);
+}
+
+/* MEDIA QUERIES PARA SLIDESHOW */
+
+@media only screen and (max-width: 600px) {
+  .huge-logo {
+    width: 90%;
+  }
+
+  .slideshow-container {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+  .huge-logo {
+    width: 75%;
+  }
+
+  .slideshow-container {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 901px) {
+  .huge-logo {
+    width: 35%;
+  }
+
+  .slideshow-container {
+    width: 80%;
+  }
+}
+
+/* FIN MEDIA QUERIES PARA SLIDESHOW */
+
+/* MEDIA QUERIES PARA LAS HOJAS */
+
+@media only screen and (max-width: 950px) {
+  .left-margin, .right-margin {
+    width: 120px;
+  }
+
+  nav li { /* centramos los elementos del menú superior */
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 951px) and (max-width: 1075px) {
+  .left-margin, .right-margin {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 1076px) {
+  .left-margin, .right-margin {
+    width: 200px;
+  }
+}
+
+/* FIN MEDIA QUERIES PARA LAS HOJAS */
+
+/* MEDIA QUERIES PARA EL MENÚ */
+
+@media only screen and (max-width: 950px) {
+  .menu-burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 951px) {
+  .menu-burger {
+    display: none;
+  }
+
+  .menu {
+    display: inline-block;
+  }
+}
+
+/* FIN MEDIA QUERIES PARA EL MENÚ */
+
+
+/* SLIDESHOW */
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+  margin-top: 12em;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* FIN SLIDESHOW */
