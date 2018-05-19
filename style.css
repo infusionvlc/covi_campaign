@@ -191,6 +191,7 @@ h3 {
 
 .left-margin { /* HOJAS */
   position: fixed; /* paralax */
+  pointer-events: none;
   left: -75px;
   top: 0%;
   width: 200px;
@@ -242,6 +243,7 @@ h3 {
 
 .right-margin { /* HOJAS */
   position: fixed; /* paralax */
+  pointer-events: none;
   right: -75px;
   top: 0%;
   width: 200px;
