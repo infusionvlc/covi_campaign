@@ -181,6 +181,10 @@ h3 {
   align-items: center; /* alinea hijos de flex al centro vertical */
 }
 
+.flex-reverse {
+  order: 0; /* en pantalla grande muestra el orden normal */
+}
+
 .full-width {
   width: 100%;
 }
@@ -354,6 +358,11 @@ footer {
     width: 120px;
   }
 
+  .responsive-section {
+    margin-bottom: 5em;
+    min-width: 100% !important;
+  }
+
   nav li { /* centramos los elementos del menú superior */
     text-align: center;
     width: 100%;
@@ -379,6 +388,10 @@ footer {
 @media only screen and (max-width: 950px) {
   .action-button {
 		font-size: 1em;
+  }
+
+  .flex-reverse {
+    order: 1; /* en pantalla pequeña muestra el orden invertido */
   }
 
   .menu-burger {
