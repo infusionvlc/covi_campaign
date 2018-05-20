@@ -377,6 +377,10 @@ footer {
 /* MEDIA QUERIES PARA EL MENÚ */
 
 @media only screen and (max-width: 950px) {
+  .action-button {
+		font-size: 1em;
+  }
+
   .menu-burger {
     display: block;
     cursor: pointer;
