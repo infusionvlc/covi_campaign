@@ -145,7 +145,11 @@ h3 {
   padding: 2.5em;
 }
 
-.cat-avatar {
+.cat-container {
+  background-position: center center;
+  background-size: cover;
+  min-height: 60vh;
+  max-height: 70vh;
   width: 100%;
 }
 
@@ -354,18 +358,9 @@ footer {
 /* MEDIA QUERIES PARA LAS HOJAS */
 
 @media only screen and (max-width: 950px) {
+
   .left-margin, .right-margin {
     width: 120px;
-  }
-
-  .responsive-section {
-    margin-bottom: 5em;
-    min-width: 100% !important;
-  }
-
-  nav li { /* centramos los elementos del menú superior */
-    text-align: center;
-    width: 100%;
   }
 }
 
@@ -388,6 +383,29 @@ footer {
 @media only screen and (max-width: 950px) {
   .action-button {
 		font-size: 1em;
+  }
+
+  .cat-container {
+    max-height: 50vh;
+    margin-bottom: 0px !important;
+  }
+
+  .pic-text {
+    font-size: 1em;
+  }
+
+  .responsive-section {
+    margin-bottom: 5em;
+    min-width: 100% !important;
+  }
+
+  .right {
+    padding-left: 0;
+  }
+
+  nav li { /* centramos los elementos del menú superior */
+    text-align: center;
+    width: 100%;
   }
 
   .flex-reverse {
