@@ -146,10 +146,9 @@ h3 {
 }
 
 .cat-container {
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
-  min-height: 60vh;
-  max-height: 70vh;
+  min-height: 75vh;
   width: 100%;
 }
 
