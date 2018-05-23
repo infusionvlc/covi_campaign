@@ -119,6 +119,7 @@ h3 {
 .action-button {
   background: var(--fire);
   border-radius: 50px;
+  border: none;
   color: var(--eter);
   cursor: pointer; /* mouse se convierte a mano */
   display: inline-block;
@@ -180,6 +181,16 @@ h3 {
   flex-grow: 1;
 }
 
+.flex-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.flex-card-main {
+  flex-grow: 1 !important;
+}
+
 .flex-center {
   align-items: center; /* alinea hijos de flex al centro vertical */
 }
@@ -228,11 +239,15 @@ h3 {
 /* ANIMACIONES POSTERS */
 
 .poster-r {
+  width: 45%;
+  box-shadow: 0px 0px 10px 0px #bfbfbf;
   transform: rotate(7deg); /* mostramos poster girado */
   transition: all 1s ease; /* activamos animaciones */
 }
 
 .poster-l {
+  width: 45%;
+  box-shadow: 0px 0px 10px 0px #bfbfbf;
   transform: rotate(-7deg); /* mostramos poster girado */
   transition: all 1s ease; /* activamos animaciones */
 }
@@ -384,9 +399,17 @@ footer {
 		font-size: 1em;
   }
 
+  p {
+    font-size: 1em;
+  }
+
   .cat-container {
     max-height: 50vh;
     margin-bottom: 0px !important;
+  }
+
+  .city {
+    width: 60% !important;
   }
 
   .pic-text {
@@ -394,7 +417,7 @@ footer {
   }
 
   .responsive-section {
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     min-width: 100% !important;
   }
 
