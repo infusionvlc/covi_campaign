@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Zilla+Slab');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Zilla+Slab');
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -149,7 +149,31 @@ h3 {
 .cat-container {
   background-position: top center;
   background-size: cover;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 2% 100%, 0 1%);
+  clip-path: polygon(100% 0, 100% 100%, 2% 100%, 0 1%);
   min-height: 75vh;
+  width: 100%;
+}
+
+.cat-name {
+  color: var(--sky);
+}
+
+.cat-field {
+  background: #ffffff33;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  transform: skewX(15deg);
+}
+
+.cat-field * {
+  font-family: 'Raleway', sans-serif;
+  padding: 0.5em;
+  transform: skewX(-15deg);
+}
+
+.cat-field img {
+  opacity: 0.2;
   width: 100%;
 }
 
@@ -189,6 +213,7 @@ h3 {
 
 .flex-card-main {
   flex-grow: 1 !important;
+  margin-bottom: 4em;
 }
 
 .flex-center {
@@ -233,6 +258,10 @@ h3 {
 
 .menu {
   display: inline-block;
+}
+
+.pic-text * {
+  color: var(--eter);
 }
 
 
@@ -314,6 +343,7 @@ h3 {
 }
 
 p {
+  color: var(--sky);
   font-size: 1.3em;
   line-height: 1.6em;
 }
@@ -404,9 +434,12 @@ footer {
   }
 
   .cat-container {
+    -webkit-clip-path: none;
+    clip-path: none;
     max-height: 50vh;
     margin-bottom: 0px !important;
   }
+
 
   .city {
     width: 60% !important;
@@ -457,6 +490,30 @@ footer {
 /* FIN MEDIA QUERIES PARA EL MENÚ */
 
 
+/* MEDIA QUERIES PARA TARJETAS */
+
+@media only screen and (max-width: 700px) {
+  .flex-card {
+    min-width: 80%;
+  }
+}
+
+
+@media only screen and (min-width: 701px) and (max-width: 950px) {
+  .flex-card {
+    min-width: 40%;
+  }
+}
+
+@media only screen and (min-width: 951px){
+  .flex-card {
+    min-width: 30%;
+  }
+}
+
+/* FIN MEDIA QUERIES PARA TARJETAS */
+
+
 /* SLIDESHOW */
 
 
@@ -483,9 +540,9 @@ footer {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: var(--eter);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 54px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
@@ -494,11 +551,16 @@ footer {
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  transform:  rotate(-3deg);
+}
+
+.prev {
+  transform:  rotate(2deg);
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  color: var(--sky);
 }
 
 /* Caption text */
